@@ -7,7 +7,8 @@ Colors:
 #C1B9AB
 #363636
 #E0E2DB
-#ACB6B0
+#A8AC93
+
 
 */
 
@@ -19,7 +20,7 @@ Colors:
 
 /* Temp Styles */
 
-*{ 
+section{ 
     padding:0.5rem;
     border:1px solid;
 }
@@ -38,7 +39,6 @@ html {
 body {
     font-family: 'Nunito Sans', sans-serif; 
     color: #363636;
-
 }
 
 h1{
@@ -47,14 +47,7 @@ h1{
     font-weight: 400;
 }
 
-/* Image Styles */
 
-.bg-image {
-    background-image: url('/images/aloha-design3.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height:10rem;
-}
 
 /*universal styles and utlitiy classes */
 
@@ -95,13 +88,34 @@ h1{
 .right   { text-align: right; }
 .center  { text-align: center; }
 
+/*colors*/
 
 .bg-dark {
-        background-color: #C1B9AB;
-        color:#363636; }
-.bg-light {background-color:#ACB6B0};
+     background-color: #aaad9d;
+     color:white;
+    }
+    
+.bg-light {background-color:#F2EDE9;};
 
-.bg-design1
+.text-light {color:white;}
+
+.tall-50 {min-height:50vh;}
+.tall-60 {min-height:60vh;}
+.tall-70 {min-height:70vh;}
+.tall-80 {min-height:80vh;}
+.tall-90 {min-height:90vh;}
+.tall-100 {min-height:100vh;}
+
+/* Image Styles */
+
+.bg-image {
+    background-image: url('/images/aloha-design3.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height:10rem;
+}
+
+.bg-sideleaf
 {
     background-image: url('/images/aloha-design1.jpg');
     background-size: cover;
@@ -111,18 +125,72 @@ h1{
 .bg-design2
 {
     background-image: url('/images/aloha-design2.jpg');
-    background-size: cover;
-    background-position: center;
 }
+
+.bg-computer
+{
+    background-image: url('/images/computer.jpg');
+    background-position:right;
+}
+
 .bg-design3
 {
     background-image: url('/images/aloha-design3.jpg');
-    background-size: cover;
-    background-position: center;
+   
 }
 .bg-design4
 {
-    background-image: url('/images/aloha-design4.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: url('/images/aloha-design4.jpg');}
+   
+
+.bg-cactus
+{
+    background-image: url('/images/cactus.jpg');
+    
 }
+
+/* Header styles*/
+header {
+    background-image: url('/images/header-image.jpg');
+    background-size:cover;
+    background-position: 50% 69%;
+}
+
+header h3 { 
+        font-size:1.5rem;
+        font-weight: 300;
+        line-height:0.5;
+        font-style: italic;
+            }
+
+header h1 { 
+            font-size: 5rem;
+            text-transform: lowercase;
+            letter-spacing: 0.05em;
+            
+            }
+
+header span{ font-weight: 500;
+            text-transform: uppercase ;}
+
+.bg-overlay{
+                position:relative;
+              }
+              
+.bg-overlay::before {
+                content:"";
+                position:absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                background-color: rgba(224, 224, 224, 0.272);
+              }
+              
+.bg-overlay > * {
+                position:relative;
+              }
+               
+.bg-overlay-gradient::before {
+                background: linear-gradient (90deg, rgba(100,0,0,0.9), rgba(0,0,0,0));
+              }
