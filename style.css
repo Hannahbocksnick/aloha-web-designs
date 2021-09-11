@@ -130,7 +130,7 @@ h1{
 .bg-computer
 {
     background-image: url('/images/computer.jpg');
-    background-position:right;
+    background-position: left;
 }
 
 .bg-design3
