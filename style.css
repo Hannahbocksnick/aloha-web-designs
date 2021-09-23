@@ -19,6 +19,9 @@ Colors:
 
 img { max-width: 100%; }
 
+/* Optional padding to override default gridlex columns */ 
+[class*=col] { padding: 0; }
+
 [class*=grid] {
     margin:0;
 }
@@ -55,6 +58,9 @@ h2 {font-family: 'Halant', serif;
     margin-bottom:1rem;}
 
 p:last-child{margin-bottom:0;}
+
+h1, h2, h3, h4, h5, h6 {margin-bottom: 1rem;}
+
 
 a{ 
     color:inherit;
@@ -117,8 +123,13 @@ h3{ margin-bottom: 1rem;}
 
 
 .small-text {font-size:1.5rem;}
-.medium-text {font-size:2.2rem;
-                font-weight: 200;}
+.medium-text {
+                font-size:2.2rem;
+                font-weight: 200;
+                margin-bottom:1rem;}
+
+.fas {margin-bottom:2.5rem;}
+
 .big-text {  
     font-size:3.8rem;
     margin-bottom:1.5rem;}
@@ -129,7 +140,7 @@ h3{ margin-bottom: 1rem;}
     text-style:italic;}
 
 .quote-icon {
-        font-size: 3rem;
+        font-size: 1.5rem;
         display:inline-block;
         line-height:1;}
 
@@ -143,11 +154,32 @@ h3{ margin-bottom: 1rem;}
 /* Image Styles */
 
 .bg-image {
-    background-image: url('/images/aloha-design3.jpg');
-    background-size: cover;
+    background-image: url('/images/aloha-design1.jpg');
+    background-size:cover;
     background-position: center;
+    background-repeat:no-repeat;
     min-height:10rem;
 }
+
+.portrait-tall {
+    padding-bottom: 175%;
+  }
+  
+  .portrait {
+    padding-bottom: 125%;
+  }
+  
+  .square {
+    padding-bottom: 100%;
+  }
+  
+  .landscape {
+    padding-bottom: 66%;
+  }
+  
+  .landscape-wide {
+    padding-bottom: 56%;
+  }
 
 .bg-sideleaf
 {
@@ -159,7 +191,7 @@ h3{ margin-bottom: 1rem;}
 .bg-vert
 {
     background-image: url('/images/vert.jpg');
-    background-position: top;
+    background-position: center;
 }
 
 .bg-computer
@@ -168,36 +200,48 @@ h3{ margin-bottom: 1rem;}
     background-position: left;
 }
 
-   
+.bg-computer2
+{
+    background-image: url('/images/computer-2.jpg');
 }
+
+.bg-leaves
+{
+    background-image: url('/images/aloha-design2.jpg');
+}
+
+   
 .bg-design4
 {
-    background-image: url('/images/aloha-design4.jpg');}
+    background-image: url('/images/aloha-design4.jpg');
+    }
    
 
 .bg-cactus
 {
-    background-image: url('/images/cactus.jpg');
-    
+    background-image: url('/images/cactus.jpg');   
 }
 
+.bg-waves {background-image: url('/images/waves.jpg')}
+
 /* Header styles*/
+
 header {
     background-image: url('/images/header-image.jpg');
     background-size:cover;
     background-position: 50% 69%;
-}
+    min-height:10rem;}
+
 
 header h3 { 
-        font-size:1.5rem;
+        font-size:1.7em;
         font-weight: 300;
         line-height:0.5;
         font-style: italic;
             }
 
-header h1 { 
-            font-size: 5rem;
-            text-transform: lowercase;
+header h2 { 
+            font-size: 3.5rem;
             letter-spacing: 0.05em;
             
             }
@@ -206,12 +250,21 @@ header span{ font-weight: 500;
             text-transform: uppercase ;}
 
 
+header nav {padding: 2% 5%;}
+
+footer .fab {display:inline-block;
+            font-size:2rem;
+            padding:1rem;}
+
+.header-nav{ background-color:white;}
 
 
+/* Overlay styles */
 
 
 .bg-overlay{
                 position:relative;
+            
               }
               
 .bg-overlay::before {
@@ -221,7 +274,7 @@ header span{ font-weight: 500;
                 left:0;
                 bottom:0;
                 right:0;
-                background-color: rgba(224, 224, 224, 0.272);
+                background-color: rgba(224, 224, 224, 0.3);
               }
               
 .bg-overlay > * {
@@ -231,3 +284,50 @@ header span{ font-weight: 500;
 .bg-overlay-gradient::before {
                 background: linear-gradient (90deg, rgba(100,0,0,0.9), rgba(0,0,0,0));
               }
+
+
+/* Contact Form*/
+
+form input, 
+form textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 2px solid rgb(220,220,220);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color ;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+form label {
+  margin-top: 1rem;
+  display: block;
+  color: #363636;
+  font-weight: bold;
+}
+
+form button {
+  background-color:#A8ac93;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  letter-spacing: 0.1em;
+  margin: 0.5rem 0;
+}
+
+/* SM - max-width in pixels approximately 768px */
+@media(max-width: 48em) {
+    .hide-sm {display:none;}
+    .center-sm {text-align:center}
+    .flex-flip-sm {flex-direction:column-reverse;}
+    }
+}
