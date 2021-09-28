@@ -332,7 +332,7 @@ form button {
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
 
 @media (max-width: 64em) {
-    body {border: 2px solid red;}
+  
   .show-md { display: block; }
   .hide-md { display: none;  }
 }
@@ -342,7 +342,7 @@ form button {
 
 @media (max-width: 48em) {
 
-    body {border: 2px solid blue;}
+    
 
     html{ font-size:14px;}
     .title {font-size: 11vw;}
@@ -381,7 +381,7 @@ form button {
 
 @media (max-width: 36em) {
 
-    body {border: 2px solid lightblue;}
+   
     
   .show-xs { display: block; }
   .hide-xs { display: none;  }
