@@ -183,6 +183,49 @@ footer nav a {display:inline-block;
 
 
 
+/*Hamburger Menu Styles */
+.hamburger-button {
+    cursor: pointer;
+    padding: 0 0.5rem;
+    display: inline-block;
+    font-weight: 200;
+    font-size: 3px;
+    line-height: 0.8;
+    margin-top: -0.7rem;
+    margin-bottom:1rem;
+    position: fixed;
+    right: 1rem;
+    top: 2.5rem;
+    z-index: 2;
+}
+
+.hamburger-button.active {
+    color: #9aa081;
+}
+
+
+.mobile-menu {
+    display: none; 
+    background-color:#A9927D; 
+    padding: 5%;
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.mobile-menu a {
+    text-decoration: none; 
+    color: inherit; 
+    padding: 5vh 5%;
+    display: block;
+    font-weight: normal;
+    font-size: 1.5rem;
+}           
+
+
 /* Image Styles */
 
 .bg-image {
@@ -271,7 +314,7 @@ width: 100%;
 
 form input:focus,
 form textarea:focus {
-  border-color ;
+  border-color:#A9927D ;
 }
 
 textarea {
@@ -301,6 +344,16 @@ form button {
 .show-sm,
 .show-md {
 	display: none;
+}
+
+/* Default Responsive Styles (Dekstop and below) */
+.mob-show {
+    display: none; 
+}
+
+@media(max-width:48em) {
+    .mob-hide { display: none; }
+    .mob-show { display: block; }
 }
 
 /* ------- MD Media Query (64em / 1024px) --------------- */ 
