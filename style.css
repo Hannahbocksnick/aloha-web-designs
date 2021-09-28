@@ -7,7 +7,6 @@ Colors:
 #C1B9AB
 #363636
 #E0E2DB
-#A8AC93
 
 */
 
@@ -82,7 +81,7 @@ html {
 .bold {font-weight: bold;}
 .featured-text {color: #A9927D;}
 
-.bg-footer {background-color:#d5d7ca}
+.bg-footer {background-color:#e8e1dc;}
 
 
 .small-text {font-size:1.5rem;}
@@ -174,19 +173,20 @@ nav a {padding:0.3rem;}
         font-style: italic;
             }
 
+footer h2 {font-size: 2rem;}
 
 
-
-footer .fab {display:inline-block;
-            font-size:2rem;
+footer nav a {display:inline-block;
+            font-size:1.5rem;
             padding:1rem;}
+            color: #A9927D;}
 
 
 
 /* Image Styles */
 
 .bg-image {
-    background-image: url('/images/aloha-design1.jpg');
+    background-image: url('/images/palm.png');
     background-size:cover;
     background-position: center;
     background-repeat:no-repeat;
@@ -205,48 +205,23 @@ footer .fab {display:inline-block;
     background-position: 50% 69%;
 }
 
-.bg-sideleaf
-{
-    background-image: url('/images/aloha-design1.jpg');
-    background-size: cover;
-    background-position: right;
-}
+.bg-vert{ background-image: url('/images/vert.jpg');}
 
-.bg-vert
-{
-    background-image: url('/images/vert.jpg');
-    background-position: center;
-}
-
-.bg-computer
-{
+.bg-computer{
     background-image: url('/images/computer.jpg');
     background-position: 80% 50%;
 }
 
 .bg-computer2
-{
-    background-image: url('/images/computer-2.jpg');
-}
+{background-image: url('/images/computer-2.jpg');}
 
-.bg-leaves
-{
-    background-image: url('/images/aloha-design2.jpg');
-}
-
-   
 .bg-design4
-{
-    background-image: url('/images/aloha-design4.jpg');
-    }
+{background-image: url('/images/aloha-design4.jpg');}
    
 
-.bg-cactus
-{
-    background-image: url('/images/cactus.jpg');   
-}
+.bg-cactus {background-image: url('/images/cactus.jpg');}
 
-.bg-waves {background-image: url('/images/waves.jpg')}
+.bg-palm {background-image: url('/images/palm.png');}
 
 .bg-portfolio { background-image: url('/images/placeholder-project.png');}
 
