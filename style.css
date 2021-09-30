@@ -183,13 +183,13 @@ footer nav a {display:inline-block;
 
 
 
+
 /*Hamburger Menu Styles */
 .hamburger-button {
     cursor: pointer;
     padding: 0 0.5rem;
     display: inline-block;
     font-weight: 200;
-    font-size: 3px;
     line-height: 0.8;
     margin-top: -0.7rem;
     margin-bottom:1rem;
@@ -223,7 +223,18 @@ footer nav a {display:inline-block;
     display: block;
     font-weight: normal;
     font-size: 1.5rem;
-}           
+}      
+
+/*Typed Animation*/
+
+#typed {
+    font-size: 3rem;
+  }
+  
+  .typed-cursor {
+        font-size: 4em;
+        color: Grey;
+  }
 
 
 /* Image Styles */

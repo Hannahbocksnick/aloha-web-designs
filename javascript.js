@@ -1,4 +1,6 @@
 
+
+
 $('.hamburger-button').click(function(){
     $('.mobile-menu').fadeToggle(1000);
     $(this).toggleClass('active');
@@ -9,3 +11,6 @@ $('.hamburger-button').click(function(){
 var typed = new Typed('#typed', {
 	stringsElement: '#typed-strings'
 });
+
+// Animate on scroll
+AOS.init();
