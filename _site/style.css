@@ -182,48 +182,40 @@ footer nav a {display:inline-block;
             color: #A9927D;}
 
 
-
-
 /*Hamburger Menu Styles */
-.hamburger-button {
-    cursor: pointer;
-    padding: 0 0.5rem;
-    display: inline-block;
-    font-weight: 200;
-    line-height: 0.8;
-    margin-top: -0.7rem;
-    margin-bottom:1rem;
-    position: fixed;
-    right: 1rem;
-    top: 2.5rem;
-    z-index: 2;
-}
-
-.hamburger-button.active {
-    color: #9aa081;
-}
-
-
+ 
 .mobile-menu {
-    display: none; 
-    background-color:#A9927D; 
-    padding: 5%;
     position: fixed; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index:1;
 }
 
-
-.mobile-menu a {
-    text-decoration: none; 
-    color: inherit; 
+.mobile-menu a{
+    display:block;
     padding: 5vh 5%;
-    display: block;
     font-weight: normal;
-    font-size: 1.5rem;
-}      
+    font-size: 1.5rem; 
+}
+
+.mobile-menu a:hover{
+    color:#363636;
+}
+
+.hamburger-button {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.hamburger-button i {
+    font-size: 2.2rem;
+    margin-bottom:0;
+}
+
+.hamburger-button.active{color:white;}
 
 /*Typed Animation*/
 
@@ -353,19 +345,11 @@ form button {
 
 .show-xs, 
 .show-sm,
-.show-md {
+.show-md,
+.mobile-menu {
 	display: none;
 }
 
-/* Default Responsive Styles (Dekstop and below) */
-.mob-show {
-    display: none; 
-}
-
-@media(max-width:48em) {
-    .mob-hide { display: none; }
-    .mob-show { display: block; }
-}
 
 /* ------- MD Media Query (64em / 1024px) --------------- */ 
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
@@ -374,6 +358,8 @@ form button {
   
   .show-md { display: block; }
   .hide-md { display: none;  }
+  .md-tall-80 {min-height:80vh;}
+  .md-tall-50 {min-height: 50vh;}
 }
 
 /* ------- SM Media Query (48em / 768px) --------------- */ 
@@ -381,9 +367,9 @@ form button {
 
 @media (max-width: 48em) {
 
-    
-
     html{ font-size:14px;}
+    p{ font-size:1.1rem;}
+
     .title {font-size: 11vw;}
     .sub-title {font-size: 3vw; }
 
@@ -411,19 +397,23 @@ form button {
     .flex-flip {
         flex-direction: row-reverse;}
 
-    
-
 }
 
 /* ------- XS Media Query (36em / 576px) --------------- */ 
 /* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
 
 @media (max-width: 36em) {
-
-   
     
   .show-xs { display: block; }
   .hide-xs { display: none;  }
+   h1{    
+    font-size: 1.6rem;
+    line-height:1.1;
+    }
+
+    h2 {
+        font-size:2rem;
+    }
 }
 
 /*media query below 400px in case you want to make something different from XS size: */
@@ -436,4 +426,10 @@ form button {
         flex-basis: 100%;
         max-width: 100%;
     }
+    html {font-size:12px;}
+    p    {font-size:1.1rem;}
+    h1{    
+        font-size: 1.4rem;
+        line-height:1.1;
+        }   
 }

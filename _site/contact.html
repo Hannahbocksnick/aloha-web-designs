@@ -47,31 +47,33 @@
 
     <header class="grid">
 
-        <div class="header-nav col-12-top grid">
-            <div class="col-4_sm-12-middle sm-text-center">
+        <div class="header-nav col-12 grid">
+            <div class="col-4_sm-11-middle">
                 <a href="/index.html">
                     <h1 class="logo">Aloha Web Designs. </h1>
                 </a>
             </div>
-            <nav class="col-8_sm-12-middle right sm-text-center mob-hide">
+            <nav class="col-8_sm-12-middle right hide-sm">
                 <a href="/about.html"> About</a>
                 <a href="/portfolio.html"> Portfolio</a>
                 <a href="/services.html"> Services </a>
                 <a href="/contact.html"> Work With Us</a>
             </nav>
+        <div class="col-1 center show-sm sm-text-center">
+            <div class="hamburger-button center">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
-        <div class="col-7_sm-12 right">
-            <a class="hamburger-button mob-show center big-text"> &#9776; </a>
-          </div>
-          <div class="mobile-menu center"> 
-            <nav> 
-                <a href="/about.html"> About</a>
-                <a href="/portfolio.html"> Portfolio</a>
-                <a href="/services.html"> Services </a>
-                <a href="/contact.html"> Work With Us</a>
-            </nav>
-      </div> 
-  </header>     
+        
+  </header>
+
+    <nav class="mobile-menu bg-dark center padded"> 
+        <a href="/about.html"> About</a>
+        <a href="/portfolio.html"> Portfolio</a>
+        <a href="/services.html"> Services </a>
+        <a href="/contact.html"> Work With Us</a>
+    </nav>
+     
 
   <section class= " grid-middle padded-05 tall-70 bg-image bg-headerimage bg-overlay bg-overlay-gradient">
         <div class="col-12 padded">
@@ -206,7 +208,16 @@
     var ml_account = ml('accounts', '3272245', 'r0q3z7c5x4', 'load');
  </script>
 
-    <!-- End MailerLite Universal -->
+<!-- End MailerLite Universal -->
+
+<!-- jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- Our custom java script file-->
+
+<script src="/scripts.js"></script>
 
 
   </body>
