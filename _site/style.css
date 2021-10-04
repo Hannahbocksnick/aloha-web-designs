@@ -173,13 +173,20 @@ nav a {padding:0.3rem;}
         font-style: italic;
             }
 
-footer h2 {font-size: 2rem;}
+footer h2 {font-size: 3rem;
+            margin-bottom:1rem;}
 
+footer nav{ margin-top:1rem;}
 
 footer nav a {display:inline-block;
             font-size:1.5rem;
             padding:1rem;
             color: #A9927D;}
+
+.copyright {
+            font-size:0.8rem;
+            font-weight:200;
+        }
 
 
 /*Hamburger Menu Styles */
