@@ -98,8 +98,8 @@ html {
 
 .subtitle{
     font-size:1rem;
-    color:rgb(120,120,125;)
-    text-style:italic;}
+    color:rgb(120,120,125);
+    font-style:italic;}
 
 .quote-icon {
         font-size: 1.5rem;
@@ -169,7 +169,7 @@ nav a {padding:0.3rem;}
 .sub-title { 
         font-size:1.7em;
         font-weight: 200;
-        line-height 1;
+        line-height: 1;
         font-style: italic;
             }
 
@@ -178,7 +178,7 @@ footer h2 {font-size: 2rem;}
 
 footer nav a {display:inline-block;
             font-size:1.5rem;
-            padding:1rem;}
+            padding:1rem;
             color: #A9927D;}
 
 
@@ -248,7 +248,7 @@ footer nav a {display:inline-block;
 
 /* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
 
-.landscape     { padding-bottom: 66%:  }
+.landscape     { padding-bottom: 66%;  }
 .portrait-tall { padding-bottom: 175%; }
 .portrait      { padding-bottom: 125%; }
 .square        { padding-bottom: 100%; }
@@ -425,7 +425,8 @@ form button {
   .show-xs { display: block; }
   .hide-xs { display: none;  }
 }
-Optional media query below 400px in case you want to make something different from XS size: 
+
+/*media query below 400px in case you want to make something different from XS size: */
 
 /* ------- Optional XXS Media Query (25em / 400px) NOT part of default Gridlex styling--------------- */ 
 /* - Styles added here will apply at devices smaller than 400px, or zoomed in equivalent */ 
