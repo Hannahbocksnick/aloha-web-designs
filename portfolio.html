@@ -1,10 +1,28 @@
 ---
 layout: default 
+promise:
+ - heading: first little heading
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa excepturi veniam.
+ - heading: second little heading
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt.Provident asperiores incidunt.
+ - heading: third little heading
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt.Provident asperiores incidunt.
+ - heading: fourth little heading
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa.
+cards:
+ - heading: first card heading
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quod inventore suscipit ducimus nihil nesciunt! Quo tenetur expedita incidunt, placeat similique ab veritatis aut.
+   featured_image: /images/aloha-design4.jpg
+ - heading: second card heading
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quod inventore suscipit ducimus nihil nesciunt! Quo tenetur expedita incidunt, placeat similique ab veritatis aut.
+   featured_image: /images/computer.jpg
+ - heading: third card heading
+   description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione quod inventore suscipit ducimus nihil nesciunt! Quo tenetur expedita incidunt, placeat similique ab veritatis aut.
+   featured_image: /images/vert.jpg 
 ---  
 
 {% include header-nav.html %}   
 
-  
 
   <section class= " grid-middle padded-05 tall-80 bg-image bg-headerimage bg-overlay bg-overlay-gradient">
         <div class="col-12 padded">
@@ -15,63 +33,38 @@ layout: default
     </div> 
 
 </section>
+
 <!-- Icon Section -->
 
-<section class="padded grid bg-dark">
+<section class="padded grid-center bg-dark">
     <div class="col-12 center"> 
         <h2 class="big-text"> our promise...</h2>
     </div>
+    {% for item in page.promise %}
     <div class="padded-sm col-3_sm-12">
-        <h3 class="dark-text center"> a little heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. </p>
+        <h3 class="dark-text center"> {{item.heading}}</h3>
+        <p> {{item.description}} </p>
     </div>
-    <div class="padded-sm col-3_sm-12 ">
-        <h3 class="dark-text center"> a little heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. </p>
-    </div>
-    <div class="padded-sm col-3_sm-12">
-        <h3 class="dark-text center"> a little heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla.</p>
-    </div>
-    <div class="padded-sm col-3_sm-12">
-        <h3 class="dark-text center"> a little heading</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla.</p>
-    </div>
+    
+    {% endfor %}
 
 </section>
 
- 
-
 
 <!---Cards--->
-<section class="grid padded">
+<section class="grid-center padded">
+    {% for item in page.cards %}
     <div class="col-4_sm-12 padded-sm">
         <div class="card">
-            <div class="bg-image bg-design4 portrait"></div>
+            <div class="bg-image portrait" style="background-image: url('{{item.featured_image}}');"></div>
             <div class="padded">
-                <h3> a little heading</h3>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat minima porro id, maxime nihil, cumque corporis rem libero, cum possimus et fugit fuga. Facere aliquam iste velit sunt expedita distinctio!</p>
+                <h3> {{item.heading}}</h3>
+                 <p>{{item.description}}</p>
             </div>
         </div>
     </div>
-    <div class="col-4_sm-12 padded-sm">
-        <div class="card">
-            <div class="bg-image bg-computer2 portrait"></div>
-            <div class="padded">
-                <h3> a little heading</h3>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, magni. Quibusdam est tempore iste voluptatem soluta cum consequuntur, non aut officia, ullam ipsa repudiandae, eaque voluptates tenetur incidunt esse cumque.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-4_sm-12 padded-sm">
-        <div class="card">
-            <div class="bg-image bg-vert portrait"></div>
-            <div class="padded">
-                <h3> a little heading</h3>
-                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex nostrum necessitatibus facere doloremque, nemo quas rem amet hic qui officiis non odio dignissimos accusamus facilis fugit quo natus impedit dolorum?</p>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
+
 </section>
 
 <!------ BANNER ------->

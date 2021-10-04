@@ -1,5 +1,14 @@
 ---
 layout: default 
+offers:
+ - icon: fas fa-laptop
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa excepturi veniam doloremque, possimus tempore sed ullam architecto nobis nostrum delectus repudiandae modi mollitia alias!
+ - icon: fas fa-globe-americas
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa excepturi veniam doloremque, possimus tempore sed ullam architecto nobis nostrum delectus repudiandae modi mollitia alias!
+ - icon: fas fa-seedling
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa excepturi veniam doloremque, possimus tempore sed ullam architecto nobis nostrum delectus repudiandae modi mollitia alias!
+ - icon: fas fa-glasses
+   description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident asperiores incidunt sapiente at quam ipsa excepturi veniam doloremque, possimus tempore sed ullam architecto nobis nostrum delectus repudiandae modi mollitia alias!
 ---  
    
 {% include header-nav.html %}
@@ -15,7 +24,7 @@ layout: default
         </div> 
     </section>
 
-    <!------ offers Section ------->
+    <!------ what we have Section ------->
     <section class="grid">
         <div class="padded col-6_sm-12-middle">
             <h2 class="sm-text-center editable"> designs from the <span class="bold featured-text">heart</span>.</h2>
@@ -35,27 +44,20 @@ layout: default
         </div>
     </section>
 
-      <!------ icon grid ------->
+      <!------ offers icon grid ------->
     <section class="padded grid bg-dark">
         <div class="col-12 center"> 
             <h2 class="big-text sm-text"> what we offer.</h2>
         </div>
+
+        {% for item in page.offers %}
+
         <div class="padded-sm col-3_sm-6_xs-12 xxs-stack center">
-            <span class="medium-text sm-text"> <i class="far fa-heart"></i> </span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. Molestiae ratione autem, officiis fugiat facilis eveniet omnis vel quae facere minus, quas, commodi error.</p>
+            <span class="medium-text sm-text"> <i class="{{item.icon}}"></i> </span>
+            <p>{{item.description}}</p>
         </div>
-        <div class="padded-sm col-3_sm-6_xs-12 xxs-stack center">
-            <span class="medium-text sm-text"> <i class="fas fa-laptop "></i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. Molestiae ratione autem, officiis fugiat facilis eveniet omnis vel quae facere minus, quas, commodi error.</p>
-        </div>
-        <div class="padded-sm col-3_sm-6_xs-12 xxs-stack center">
-            <span class="medium-text sm-text"> <i class="fas fa-glasses"></i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. Molestiae ratione autem, officiis fugiat facilis eveniet omnis vel quae facere minus, quas, commodi error.</p>
-        </div>
-        <div class="padded-sm col-3_sm-6_xs-12 xxs-stack center">
-           <span class="medium-text sm-text"> <i class="fas fa-leaf"></i></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, assumenda ab. Perferendis maxime quisquam nulla. Molestiae ratione autem, officiis fugiat facilis eveniet omnis vel quae facere minus, quas, commodi error.</p>
-        </div>
+        
+        {% endfor %}
 
     </section>
 
