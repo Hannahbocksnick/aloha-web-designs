@@ -406,14 +406,12 @@ form button {
     
   .show-xs { display: block; }
   .hide-xs { display: none;  }
-   h1{    
+   
+  h1{    
     font-size: 1.6rem;
     line-height:1.1;
     }
-
-    h2 {
-        font-size:2rem;
-    }
+    h2 {font-size:2rem; }
 }
 
 /*media query below 400px in case you want to make something different from XS size: */
@@ -426,8 +424,10 @@ form button {
         flex-basis: 100%;
         max-width: 100%;
     }
+
     html {font-size:12px;}
     p    {font-size:1.1rem;}
+    
     h1{    
         font-size: 1.4rem;
         line-height:1.1;
