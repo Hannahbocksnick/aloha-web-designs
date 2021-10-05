@@ -230,9 +230,9 @@ footer nav a {display:inline-block;
     font-size: 3rem;
   }
   
-  .typed-cursor {
-        font-size: 4em;
-        color: Grey;
+.typed-cursor {
+        font-size: 2rem;
+        color: #363636;
   }
 
 
