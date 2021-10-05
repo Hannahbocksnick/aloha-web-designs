@@ -224,18 +224,6 @@ footer nav a {display:inline-block;
 
 .hamburger-button.active{color:white;}
 
-/*Typed Animation*/
-
-#typed {
-    font-size: 3rem;
-  }
-  
-.typed-cursor {
-        font-size: 2rem;
-        color: #363636;
-  }
-
-
 /* Image Styles */
 
 .bg-image {
