@@ -227,6 +227,7 @@ footer nav a {display:inline-block;
 /* Image Styles */
 
 .bg-image {
+    background-color:rgba(240, 240, 240);
     background-image: url('/images/palm.png');
     background-size:cover;
     background-position: center;
@@ -236,9 +237,18 @@ footer nav a {display:inline-block;
 /* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
 
 .landscape     { padding-bottom: 66%;  }
+.landscape-wide {padding-bottom: 56%;  }
 .portrait-tall { padding-bottom: 175%; }
 .portrait      { padding-bottom: 125%; }
 .square        { padding-bottom: 100%; }
+
+/* Background Position */
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
+
+
 
 
 .bg-headerimage{
@@ -266,6 +276,11 @@ footer nav a {display:inline-block;
 
 .bg-portfolio { background-image: url('/images/placeholder-project.png');}
 
+/* Image Gallery */
+
+.gallery [class*="col-"] {
+    padding: 0.5%;
+  }
 
 /* Overlay styles */
 

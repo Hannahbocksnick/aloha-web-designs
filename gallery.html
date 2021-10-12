@@ -1,0 +1,62 @@
+---
+layout: default 
+gallery:
+ - column-size: col-6
+   aspect-ratio: square
+   background-image: /images/vert.jpg
+ - column-size: col-6
+   aspect-ratio: square
+   background-image: /images/computer.jpg
+ - column-size: col-4_xs-12
+   aspect-ratio: portrait-tall
+   background-image: /images/aloha-design4.jpg  
+ - column-size: col-4_xs-12
+   aspect-ratio: portrait-tall
+   background-image: /images/palm.png  
+ - column-size: col-4_xs-12
+   aspect-ratio: portrait-tall
+   background-image: /images/cactus.jpg  
+ - column-size: col-12
+   aspect-ratio: landscape
+   background-image: /images/computer-2.jpg  
+---
+
+{% include header-nav.html %}   
+
+<section class="padded">
+
+    <div class="gallery grid">
+
+        {% for item in page.gallery %}
+        <div class="{{item.column-size}}">
+            <div class="bg-image {{item.aspect-ratio}}" 
+            style="background-image: url('{{item.background-image}}');">
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <!--
+    <div class="gallery grid">
+        <div class="col-6">
+        <div class="bg-image square bg-vert"></div>
+        </div>
+        <div class="col-6">
+        <div class="bg-image square bg-computer bg-pos-b"></div>
+        </div>
+        <div class="col-4_xs-12">
+        <div class="bg-image portrait-tall bg-design4"></div>
+        </div>
+        <div class="col-4_xs-12">
+        <div class="bg-image portrait-tall bg-img-4"></div>
+        </div>
+        <div class="col-4_xs-12">
+        <div class="bg-image bg-cactus portrait-tall "></div>
+        </div>
+        <div class="col-12">
+        <div class="bg-image bg-computer2 landscape bg-img-5"></div>
+        </div>
+    </div>  -->
+</section>
