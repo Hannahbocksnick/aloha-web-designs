@@ -1,66 +1,76 @@
 ---
 layout: default
+popup-gallery: true
+gallery-background: bg-dark
 gallery:
   - column-size: col-6
     aspect-ratio: square
     background_image: /images/vert.jpg
+    type: plant
   - column-size: col-6
     aspect-ratio: square
     background_image: /images/computer.jpg
+    type: office
   - column-size: col-4_sm-12
     aspect-ratio: portrait-tall
     background_image: /images/aloha-design4.jpg
+    type: office
   - column-size: col-4_sm-12
     aspect-ratio: portrait-tall
     background_image: /images/palm.png
+    type: plant
   - column-size: col-4_sm-12
     aspect-ratio: portrait-tall
     background_image: /images/cactus.jpg
+    type: plant
   - column-size: col-12
     aspect-ratio: landscape
-    background_image:
+    background_image:/images/computer-2.jpg
+    type: plant
 ---
 
-{% include header-nav.html %}   
+{% include header-nav.html %}
 
-<section class="padded">
+<section class= " grid-middle padded-05 tall-50 bg-image bg-headerimage bg-overlay bg-overlay-gradient">
+  <div class="col-12 padded">
+      <h2 class="title editable sm-text-center"data-aos="fade-in" data-aos-duration="2000">view our work. </h1>
+      <h3 class="sub-title sm-text-center" data-aos="fade-in" data-aos-duration="2000"> enjoy the gallery... </h3>
+  </div>
+
+</section>
+
+{% if page.popup-gallery == true %}
+
+  <!-- Popup Gallery-->
+
+<section class="padded
+{{page.gallery-background}} ">
 
   <h2> Popup Gallery</h2>
+  <div class="gallery grid" id="lightgallery">
 
-      <!-- Popup Gallery-->
+     {% for item in page.gallery %}
 
+     {% if item.type == 'plant' or item.type = 'office' %}
 
-    <div class="gallery grid" id="lightgallery">
-
-        {% for item in page.gallery %}
         <a class="{{item.column-size}}" href="{{item.background_image}}">
             <div class="bg-image {{item.aspect-ratio}}" 
             style="background-image: url('{{item.background_image}}');">
             </div>
           </a>
+      {% endif %}
 
         {% endfor %}
 
     </div>
+</section>
 
-    <div class="gallery grid" id="lightgallery-2">
-
-      <a class="button" href="/images/vert.jpg" title ="fields">
-          View Our Work
-      </a>
-      <a href="/images/palm.png" title="Palm Trees forever"></a>
-      <a href="/images/vert.jpg" title="In the Fields"></a>
-      <a href=" /images/aloha-design4.jpg" title="Bohemian Style"></a>
-      <a href="/images/computer.jpg" title="hard at work"></a>
-      <a href="/images/vert.jpg" title="Grasses"></a>
-      <a href=" /images/computer-2.jpg" title="computer scene"></a>
-
-  </div>
-  </section>
+  {% else %}
+ 
 
     <!-- Standard Gallery-->
 
-    <section class="padded">
+<section class="padded {{page.gallery-background}}">
 
     <h2> Standard Gallery</h2>
 
@@ -76,8 +86,14 @@ gallery:
       {% endfor %}
 
   </div>
+  
+</section>
 
-    <!--
+{% endif %}
+
+
+ <!--
+
     <div class="gallery grid">
         <div class="col-6">
         <div class="bg-image square bg-vert"></div>
@@ -97,5 +113,20 @@ gallery:
         <div class="col-12">
         <div class="bg-image bg-computer2 landscape bg-img-5"></div>
         </div>
-    </div>  -->
-</section>
+    </div>  
+  
+  
+  
+    <div class="gallery grid" id="lightgallery-2">
+
+      <a class="button" href="/images/vert.jpg" title ="fields">
+          View Our Work
+      </a>
+      <a href="/images/palm.png" title="Palm Trees forever"></a>
+      <a href="/images/vert.jpg" title="In the Fields"></a>
+      <a href=" /images/aloha-design4.jpg" title="Bohemian Style"></a>
+      <a href="/images/computer.jpg" title="hard at work"></a>
+      <a href="/images/vert.jpg" title="Grasses"></a>
+      <a href=" /images/computer-2.jpg" title="computer scene"></a>
+
+  </div> -->
