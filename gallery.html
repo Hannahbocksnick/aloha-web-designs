@@ -25,8 +25,8 @@ gallery:
     type: plant
   - column-size: col-12
     aspect-ratio: landscape
-    background_image:/images/computer-2.jpg
-    type: plant
+    background_image: /images/computer-2.jpg
+    type: office
 ---
 
 {% include header-nav.html %}
@@ -49,9 +49,8 @@ gallery:
   <h2> Popup Gallery</h2>
   <div class="gallery grid" id="lightgallery">
 
-     {% for item in page.gallery %}
-
-     {% if item.type == 'plant' or item.type = 'office' %}
+    {% for item in page.gallery %}
+    {% if item.type == 'plant' or item.type == 'office' %}
 
         <a class="{{item.column-size}}" href="{{item.background_image}}">
             <div class="bg-image {{item.aspect-ratio}}" 
@@ -59,8 +58,7 @@ gallery:
             </div>
           </a>
       {% endif %}
-
-        {% endfor %}
+      {% endfor %}
 
     </div>
 </section>
@@ -90,6 +88,15 @@ gallery:
 </section>
 
 {% endif %}
+
+<!-- You Tube Video -->
+
+{% include youtube.html youtube_id="YIiHiMXOeYU" %}
+
+
+<!--- Testimonial-->
+
+{% include testimonial.html %}
 
 
  <!--
